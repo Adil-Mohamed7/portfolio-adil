@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   motion,
   AnimatePresence,
@@ -20,12 +20,22 @@ export const FloatingNav = ({
   }[];
   className?: string;
 }) => {
+  const [visible, setVisible] = useState(true);
+  const [isClient, setIsClient] = useState(false);
+
+  // Ensure component only renders on client side
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+
   const { scrollYProgress } = useScroll();
 
-  // set true for the initial state so that nav bar is visible in the hero section
-  const [visible, setVisible] = useState(true);
-
   useMotionValueEvent(scrollYProgress, "change", (current) => {
+
+    
+    if (!isClient) return;
+    
     // Check if current is not undefined and is a number
     if (typeof current === "number") {
       let direction = current! - scrollYProgress.getPrevious()!;
@@ -42,6 +52,11 @@ export const FloatingNav = ({
       }
     }
   });
+
+  // Don't render anything until client-side hydration is complete
+  if (!isClient) {
+    return null;
+  }
 
   return (
     <AnimatePresence mode="wait">
@@ -85,11 +100,6 @@ export const FloatingNav = ({
             <span className=" text-sm !cursor-pointer">{navItem.name}</span>
           </Link>
         ))}
-        {/* remove this login btn */}
-        {/* <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
-          <span>Login</span>
-          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
-        </button> */}
       </motion.div>
     </AnimatePresence>
   );
