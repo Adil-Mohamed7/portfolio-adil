@@ -1,7 +1,5 @@
 <div align="center">
-  <br />
-    </a>
-  <br />
+ 
 
   <div>
     <img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="nextdotjs" />
@@ -13,46 +11,45 @@
   <h3 align="center">A Modern Next.js Portfolio</h3>
 </div>
 
-## ðŸ“‹ <a name="table">Table of Contents</a>
+## 📋 <a name="table">Table of Contents</a>
 
-1. ðŸ¤– [Introduction](#introduction)
-2. âš™ï¸ [Tech Stack](#tech-stack)
-3. ðŸ”‹ [Features](#features)
-4. ðŸ¤¸ [Quick Start](#quick-start)
-5. ðŸ•¸ï¸ [Code to Copy](#snippets)
-6. ðŸ”— [Assets](#links)
+1. 🤖 [Introduction](#introduction)
+2. ⚙️ [Tech Stack](#tech-stack)
+3. 🔋 [Features](#features)
+4. 🤸 [Quick Start](#quick-start)
+5. 🕸️ [Code to Copy](#snippets)
+6. 🔗 [Assets](#links)
 
-
-## <a name="introduction">ðŸ¤– Introduction</a>
+## <a name="introduction">🤖 Introduction</a>
 
 Built with Next.js for handling the user interface, Three.js for rendering 3D elements, Framer motion for beautiful animations, and styled with TailwindCSS, this portfolio demonstrates the developer's skills in a unique manner that creates a lasting impact.
 
-## <a name="tech-stack">âš™ï¸ Tech Stack</a>
+## <a name="tech-stack">⚙️ Tech Stack</a>
 
 - Next.js
 - Three.js
 - Framer Motion
 - Tailwind CSS
 
-## <a name="features">ðŸ”‹ Features</a>
+## <a name="features">🔋 Features</a>
 
-ðŸ‘‰ **Hero**: Captivating introduction featuring a spotlight effect and dynamic background.
+👉 **Hero**: Captivating introduction featuring a spotlight effect and dynamic background.
 
-ðŸ‘‰ **Bento Grid**: Modern layout presenting personal information using cutting-edge CSS design techniques.
+👉 **Bento Grid**: Modern layout presenting personal information using cutting-edge CSS design techniques.
 
-ðŸ‘‰ **3D Elements**:  Interactive 3D design elements, such as a GitHub-style globe and card hover effects, adding depth and engagement.
+👉 **3D Elements**:  Interactive 3D design elements, such as a GitHub-style globe and card hover effects, adding depth and engagement.
 
-ðŸ‘‰ **Testimonials**: Dynamic testimonials area with scrolling or animated content for enhanced engagement.
+👉 **Testimonials**: Dynamic testimonials area with scrolling or animated content for enhanced engagement.
 
-ðŸ‘‰ **Work Experience**: Prominent display of professional background for emphasis and credibility.
+👉 **Work Experience**: Prominent display of professional background for emphasis and credibility.
 
-ðŸ‘‰ **Canvas Effect**: Innovative use of HTML5 canvas to create visually striking effects in the "approaches" section.
+👉 **Canvas Effect**: Innovative use of HTML5 canvas to create visually striking effects in the "approaches" section.
 
-ðŸ‘‰ **Responsiveness**: Seamless adaptability across all devices, ensuring optimal viewing experience for every user.
+👉 **Responsiveness**: Seamless adaptability across all devices, ensuring optimal viewing experience for every user.
 
 and many more, including code architecture and reusability 
 
-## <a name="quick-start">ðŸ¤¸ Quick Start</a>
+## <a name="quick-start">🤸 Quick Start</a>
 
 Follow these steps to set up the project locally on your machine.
 
@@ -87,7 +84,7 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
 
-## <a name="snippets">ðŸ•¸ï¸ Snippets</a>
+## <a name="snippets">🕸️ Snippets</a>
 
 <details>
 <summary><code>data/index.ts</code></summary>
@@ -639,6 +636,15 @@ style={{
 </details>
 
 
-## <a name="links">ðŸ”— Assets</a>
+## <a name="links">🔗 Assets</a>
 
 Assets used in the project can be found [here](https://drive.google.com/file/d/1ZmtiMilUYTp1wkiXWMFX6AUk-msE981-/view?usp=sharing)
+
+## <a name="more">🚀 More</a>
+**Advance your skills with Next.js Pro Course**
+
+Enjoyed creating this project? Dive deeper into our PRO courses for a richer learning experience. They're packed with detailed explanations, cool features, and exercises to boost your skills. Give it a go!
+
+<a href="https://www.jsmastery.pro/ultimate-next-course" target="_blank">
+<img src="https://i.ibb.co/804sPK6/Image-720.png" alt="Project Banner">
+</a>
