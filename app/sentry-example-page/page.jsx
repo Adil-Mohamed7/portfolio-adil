@@ -1,15 +1,8 @@
 "use client";
 
-import Head from "next/head";
-
 export default function Page() {
   return (
     <div>
-      <Head>
-        <title>Portfolio - Adil</title>
-        <meta name="description" content="Welcome to my portfolio!" />
-      </Head>
-
       <main
         style={{
           minHeight: "100vh",
