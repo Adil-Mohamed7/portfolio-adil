@@ -32,16 +32,15 @@ export const FloatingNav = ({
   const { scrollYProgress } = useScroll();
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
-
-    
     if (!isClient) return;
     
     // Check if current is not undefined and is a number
     if (typeof current === "number") {
       let direction = current! - scrollYProgress.getPrevious()!;
+      let currentScroll = window.scrollY;
 
-      if (scrollYProgress.get() < 0.05) {
-        // also set true for the initial state
+      // Always show navbar when near top
+      if (currentScroll < 100) {
         setVisible(true);
       } else {
         if (direction < 0) {
@@ -87,18 +86,28 @@ export const FloatingNav = ({
         }}
       >
         {navItems.map((navItem: any, idx: number) => (
-          <Link
+          <button
             key={`link=${idx}`}
-            href={navItem.link}
+            onClick={() => {
+              const element = document.querySelector(navItem.link);
+              if (element) {
+                const headerOffset = 100;
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                
+                window.scrollTo({
+                  top: offsetPosition,
+                  behavior: "smooth"
+                });
+              }
+            }}
             className={cn(
-              "relative dark:text-neutral-50 items-center  flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+              "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
-            {/* add !cursor-pointer */}
-            {/* remove hidden sm:block for the mobile responsive */}
-            <span className=" text-sm !cursor-pointer">{navItem.name}</span>
-          </Link>
+            <span className="text-sm !cursor-pointer">{navItem.name}</span>
+          </button>
         ))}
       </motion.div>
     </AnimatePresence>
